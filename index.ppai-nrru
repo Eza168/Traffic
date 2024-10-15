@@ -1,0 +1,320 @@
+<?php
+
+require_once("admin/pages/connect.php");
+
+?>
+<!DOCTYPE html>
+<html lang="en">	
+<?php include ('head.php');  ?>
+  <body>
+	
+     <div class="row pad_row">
+      
+      	<div class="col-lg-12 col-sm-12 col-xs-12 bg_fff" id="div_content" > 
+      		<div class="row bg_cont">    			
+      	   			<div class="col-lg-12 col-sm-12 mb-2">
+				    	<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+					        
+					        <div class="carousel-inner" role="listbox">
+					          
+					           <?php
+					      
+					        	$sql_ban ="select * from banner where ban_cover=1 order by ban_id desc";
+								$query_ban =  mysqli_query($conn, $sql_ban);
+								$i =0;
+								while($row_ban=mysqli_fetch_assoc($query_ban))
+								{		
+
+									$classactive="";
+									if($i==0){
+													
+										$classactive="active";
+									}
+									else{
+										$classactive="";
+									}
+									
+						          echo '<div class="carousel-item '.$classactive.'">
+						           			<a href="'.$row_ban['ban_link'].'"><img class="img-responsive img-hover card-img-top" src="admin/pages/Upload/server/php/files/'.$row_ban['ban_pic'].'"></a>
+						          		</div>';
+						          	
+									$i++;
+								}
+					        ?>
+					        </div>
+					        
+					        
+					        
+					        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					          <span class="sr-only">Previous</span>
+					        </a>
+					        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					          <span class="sr-only">Next</span>
+					        </a>
+					    </div>
+					</div>
+					
+					
+      	   		
+      		</div>
+      		
+      		<div class="row pb-2 bg_cont text-center">    			
+      	   		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pr-1"><a href="show_roomnrru.php"><img class="img-responsive" src="vendor/bootstrap/images/icon01.jpg" alt="" /></a></div>
+      	   		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-sm-12  pl-1 pr-1"><a href="show_pages.php?spage=32bb90e8976aab5298d5da10fe66f21d"><img class="img-responsive" src="vendor/bootstrap/images/icon02.jpg" alt="" /></a></div>
+      	   		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-sm-12 pl-1"><a href="show_pages.php?spage=d2ddea18f00665ce8623e36bd4e3c7c5"><img class="img-responsive" src="vendor/bootstrap/images/icon03.jpg" alt="" /></a></div>
+					
+					
+      	   		
+      		</div>
+      		
+      		<div class="row bg_cont"> 
+      			<div class="col-lg-8 col-sm-12  pr-1">
+      				 <div class="row">
+      				 	<div class="col-lg-12 col-sm-12 bg_news1 "> <h4>   เช็คตารางการใช้งานห้องและสถานที่</h4></div>
+      				</div>
+      				<div class="row">
+      					<div class="col-lg-12 col-sm-12  pr-1 text-center">
+      						<!-- ใส่ google calanda-->
+      						
+      						<iframe src="https://calendar.google.com/calendar/embed?src=property_nrru%40nrru.ac.th&ctz=Asia%2FBangkok" style="border: 0" width="100%" height="680" frameborder="0" scrolling=""></iframe>
+      					
+      					</div>
+      				</div>
+      			</div>
+      			<div class="col-lg-4 col-sm-12  pl-1">
+      				<div class="row ">
+      					
+      					<div class="col-lg-12 col-sm-12 pb-2 text-center">	
+      						<img class="img-responsive w-50 mb-2" src="vendor/bootstrap/images/saiphon.jpg" alt="" />
+      										
+	      					<!--<div class="row text-center">
+	      				 		<div class="col-lg-2 col-sm-12"></div> 
+	      				 		<div class="col-lg-8 col-sm-12"> 
+	      				 			<img class="img-responsive" src="vendor/bootstrap/images/saiphon.jpg" alt="" /></div>
+	      				 		<div class="col-lg-2 col-sm-12"></div> 
+	      					</div>-->
+      						<img class="img-responsive w-50" src="vendor/bootstrap/images/IMG_1909-1.JPG" alt="" />
+      					</div>
+      					
+      					
+      				</div>
+      				
+      			</div>
+      		</div>
+      		
+      		 <div class="row a_main">
+      		 		
+      			<div class="col-lg-8 col-sm-12 bg_news_img">
+      					
+      					<div class="row">
+      						<div class="col-lg-12 col-sm-12">
+		      					<div class="row">
+							      	<div class="col-lg-12 col-sm-12 bg_news2 "> <h4>   ข่าวสารประชาสัมพันธ์ </h4></div>
+							    </div>
+							</div>	
+							
+		      				<?php
+		      						$sql_n ="select * from newstype ";
+									$result_n = mysqli_query($conn, $sql_n);					
+									$num_n = 1;
+									while($row_n = mysqli_fetch_assoc($result_n)){
+										
+										$class_iconNews="";
+										
+										$type_n = $row_n['newstype_id'];
+										
+										echo '<div class="col-lg-12 col-sm-12 pt-3">
+												
+							      				';
+										
+											$sql_news ="select * from news where newstype_id=".$row_n['newstype_id']." order by news_id desc limit 10";
+											$result_news = mysqli_query($conn, $sql_news);					
+											$i1=0;
+											while($row_news = mysqli_fetch_assoc($result_news))
+											{					
+												$id_md5 = md5($row_news['news_id']);
+											
+								      			
+												echo '<div class="row">	
+																					
+														<div class="col-lg-12 col-sm-10 card-text text-light pl-4">
+															<a href="show_news.php?id='.$id_md5.'"><i class="fa fa-circle" aria-hidden="true"> </i>  '.$row_news['news_head'].'</a>								
+														</div>
+														
+													</div>';
+									      
+									      	$i1++;
+
+										}
+									$num_n++;
+									
+									echo '<div class="row">
+										    <div class="col-lg-12 text-right text-light pr-4 col_btn">
+										      <a href="show_newsAll.php?type='.$type_n.'">อ่านข่าวทั้งหมด
+										      		 <span class="glyphicon glyphicon-chevron-right"></span>
+									          </a>
+									        </div>   
+								     	</div>
+				     	
+		      						</div>';
+									
+									
+								}
+		      				
+		      				?>
+		      			</div>
+		      			
+      					<div class="row">
+      						
+		      				<div class="col-lg-12 col-sm-12">
+		      					<div class="row">
+							      	<div class="col-lg-12 col-sm-12 bg_news2 "> <h4>   กิจกรรม</h4></div>
+							    </div>
+							</div>	
+							
+		      				<div class="col-lg-12 col-sm-12">
+		     					<div class="row pt-3">
+		     						
+		     						
+		     				
+							      <?php
+							      
+							       	$sql_pic ="select * from album a, picture p where a.album_id=p.album_id and p.cover=1 order by a.album_id desc limit 8";
+									$result_pic = mysqli_query($conn, $sql_pic);					
+									$num = 1;
+									while($row_pic = mysqli_fetch_assoc($result_pic)){
+										
+										$id_md5 = md5($row_pic['album_id']);
+										
+							      	echo '<div class="col-lg-3 col-md-3 col-sm-12 pl-2 pr-2 ">
+								      		<a href="show_picture.php?id='.$id_md5.'">
+								      			<div class="row">
+									           		 <div class="col-lg-12">
+									                             
+									                	 <img class="img-fluid rounded img-thumbnail" src="admin/pages/Upload/server/php/files/' . $row_pic['pic_data']. '" alt="">
+									              		 <p class="m-0">'.$row_pic['album_name'].'</p>
+									            	</div>
+									            
+									        
+									          </div>
+										   </a>   
+										      	
+								      	</div>';
+								      
+								      	$num ++;
+
+								}
+						?>
+								
+									    
+							     	</div>
+						     		<div class="row">
+										    <div class="col-lg-12 text-right text-light pr-4 col_btn">
+										    	<a href="show_albumAll.php" >อ่านข่าวทั้งหมด
+								            <span class="glyphicon glyphicon-chevron-right"></span>
+								          </a>
+										    </div>
+				     	   			</div>
+			      			</div>
+		      		</div>
+		      		
+		      		
+		      		
+		      	</div>
+				    
+				<div class="col-lg-4 col-sm-12 bg_cont_right">
+      				<div class="row">
+						
+							<div class="col-lg-12 ">
+							      <?php include ('menu_right.php');  ?>
+						    </div> 
+					
+			      	</div>
+			      	
+			      
+      			</div>			
+				
+				
+			</div>
+      		
+			
+	            	     	
+    	</div>
+    
+    
+    
+    <!-- ปิด div row news-->
+	
+    </div> <!-- ปิด col-lg-8 -->
+  
+
+    <div class="row pad_row">
+    	<?php include ('footer.php');  ?>
+    </div>        	     	
+ 
+    <!-- Footer -->
+<div style="display: none;">
+<a href="https://hicas.ac.in/js/rp888/">https://hicas.ac.in/js/rp888/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">https://elearnksgst.kerala.gov.in/lib/hub/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">rp8888</a>
+<a href="https://homehub.co.th/duta168/">https://homehub.co.th/duta168/</a>
+<a href="https://qiscet.edu.in/tokekwin/">https://qiscet.edu.in/tokekwin/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">https://adhiyamaan.ac.in/robopragma/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">robopragma</a>
+<a href="https://namastehindustan.in/casino/">https://namastehindustan.in/casino/</a>
+<a href="https://namastehindustan.in/casino/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">scatter hitam</a>
+<a href="https://timesrnd.taylors.edu.my/slot-thailand/">https://timesrnd.taylors.edu.my/slot-thailand/</a>
+<a href="https://svcop.in/rp8888/">https://svcop.in/rp8888/</a>
+<a href="https://svcop.in/rp8888/">rp8888</a>
+<a href="https://bangkokems.bangkok.go.th/thailand/">https://bangkokems.bangkok.go.th/thailand</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">https://mail.hicas.ac.in/files/rp8888/</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">rp8888</a>
+<a href="https://globex.in/apk/">https://globex.in/apk/</a>
+<a href="https://www.infinite.co.th/assets/images/uploads/welcome/">https://www.infinite.co.th/assets/images/uploads/welcome/</a>
+<a href="http://hflight.net/gacor/">http://hflight.net/gacor/</a>
+<a href="https://e-training.imu.edu.my/data/">https://e-training.imu.edu.my/data/</a>
+<a href="https://e-training.imu.edu.my/data/">rp8888</a>
+<a href="https://dsmaxproperties.com/storage/">https://dsmaxproperties.com/storage/</a>
+<a href="https://dsmaxproperties.com/storage/">rp8888</a>
+<a href="https://gliztech.com/xfn/">https://gliztech.com/xfn/</a>
+<a href="https://pertanian.unitri.ac.id/games/">https://pertanian.unitri.ac.id/games/</a>
+<a href="https://pertanian.unitri.ac.id/games/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">https://stikesbanyuwangi.ac.id/siakad/</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">https://stikesbanyuwangi.ac.id/pddikti/</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">rp8888</a>
+</div>
+		
+   
+    
+	
+  </body>
+
+</html>
+
+<!--<script>
+	
+	   $(document).ready(function(){
+	   	
+	   				$("#txtsearch").keyup(function(){
+						//$("#wait").css("display", "block");
+					   
+						$("#div_content").load("pages/getdata.php", 
+						{ 
+							page:"search_data",
+							txtsearch:$("#txtsearch").val()
+							
+						}, 
+						function() {
+							//$("#wait").css("display", "none");
+						});
+					});
+			
+					
+			});
+</script>-->
