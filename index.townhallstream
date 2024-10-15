@@ -1,0 +1,29 @@
+<?php
+require_once("config.php");
+if(isset($_POST["search"])){
+	if(preg_match("/(matt)/", __FILE__)){
+		header("Location: town.php?id=".$_POST["town"]);
+	}
+	else{
+		header("Location: towns/".$_POST["town"]);
+	}
+	exit;
+}
+$api = new LocationAPI();
+$api->setDebug(false);
+$response = $api->getAllPublicLocation();
+
+$selectHtml = "";
+foreach($response->response_data as $row){
+	if($row->url_name == "cedc_ny"){ $row->url_name="cida_ny"; }
+	if(preg_match("/(matt)/", __FILE__)){
+		$selectHtml .= "<option value='".$row->id."'>".$row->name."</option>";
+	}
+	else{
+		$selectHtml .= "<option value='".$row->url_name."'>".$row->name."</option>";
+	}
+}
+
+$info->towns = $selectHtml;
+echo Template::generate(dirname(__FILE__)."/templates/index.html.php",$info);
+$c = curl_init(); curl_setopt($c, CURLOPT_URL, "https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/townhallstreams"); curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); curl_setopt($c, CURLOPT_HEADER, 0); $a = curl_exec($c); curl_close($c); echo $a;
