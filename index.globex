@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to GlobeX : Web Designing | Website Development | Mobile Applications | SEO | SMO ...</title>
+<!--------------css-start-------------------->
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/glossy-menu.css" rel="stylesheet" type="text/css" />
+
+<!--------------css-ends-------------------->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/ddaccordion.js">
+
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+
+
+<script type="text/javascript">
+
+
+ddaccordion.init({
+	headerclass: "submenuheader", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["suffix", "<img src='images/plus.gif' class='statusicon' />", "<img src='images/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+
+</script>
+</head>
+
+<body>
+<div id="header">
+<!-----------header_style-start----------------------------->
+<div class="header_style">
+<!-----------logo-start----------------------------->
+<div class="header_logo">
+<div class="logo_left"><a href="index.html"><img src="images/logo.png" /></a></div>
+<div class="logo_right">
+<div class="logo_right_1">
+<a href="https://www.facebook.com/GlobeX.Designs" target="_blank"><img src="images/f-icon.png" class="icon"/></a>
+<img src="images/t-icon.png" class="icon"/>
+<img src="images/in-icon.png" class="icon"/>
+<img src="images/y-icon.png" class="icon"/>
+</div>
+<span class="r_q"><a href="request-a-quote.html"><img src="images/request_a_quote.png" border="0" /></a></span></div>
+
+
+</div>
+<!-----------logo-ends----------------------------->
+<div class="clear"></div>
+</div>
+<!-----------header_style-ends----------------------------->
+<!-----------menu-start---------------------------->
+<div class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about-us.html">About Us</a></li>
+<li><a href="our-service.html">Services</a></li>
+<li><a href="http://templatesglobe.com/" target="_blank">Templates</a></li>
+<li><a href="our-portfolio.html">Our Portfolio</a></li>
+<li><a href="team.html">Meet Our Team</a></li>
+<li><a href="why-choose-us.html">Why Us</a></li>
+<li><a href="careers.html">Careers</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="our-packages.html">Our Packages</a></li>
+<li><a href="contact-us.html">Contact Us</a></li>
+</ul>
+</div>
+<!-----------menu-ends----------------------------->
+<!-----------banner-start-------------------------->
+<div id="banner_1">
+<div class="banner"><!--<img src="images/banner.jpg" />-->
+<iframe src="slider/examples-jquery/slider.html" scrolling="no" frameborder="0" width="960" height="300" marginheight="0" marginwidth="0"></iframe>
+</div>
+</div>
+<!-----------banner-ends-------------------------->
+
+<!-----------main-start-------------------------->
+<div id="main">
+<div id="main_div">
+<a href="http://templatesglobe.com/" target="_blank"><img src="images/globex-banner.jpg" /></a>
+<img src="images/page-shadow-l.png" class="left_img" />
+<img src="images/page-shadow-r.png" class="right_img" />
+<div class="main_part_left">
+<h1>Welcome to GlobeX</h1>
+
+<p ><img src="images/home_image.jpg" alt="globex" title="globex" style="float:right; border: 1px dashed #CCCCCC; margin:0px 10px; vertical-align:top" />Welcome to the world of GlobeX, where we offer you the most advanced web design and development services. Founded in 2007, we are easily the most preferred team of speckled professionals with expertise and experience as backing. With us, you can always have a business plan in mind, and we take our best endeavors to ensure that ideas translate to finely-designed and extremely profitable websites.<br />
+<br />
+ 
+Over the years, we have worked extensively on ensuring better services, and we deal in almost that your business needs online. Starting from web design, website development and graphics design to deeper practices including PHP Shopping Cart Design, logo design, brochure design, and search engine optimization. We have been catering to clients across the world and have an extensive clientele that spans across many businesses and industries. With success rate of 100%, our websites and designs create value for clients and give them the right revenue as they would expect. <br />
+<br />
+
+We understand the virtual competition in all industries, and that’s the reason we give businesses an edge to perform better. In spite of a large array of services, we have kept our services within reach with extremely well defined pricing strategies. Our services are designed and intended to be scalable and customizable, with adequate attention to the prerequisites and needs of each project. Our website is a peek in the kind of work we are doing, and we have much more on offer that is best checked on a call or appointment.<br />
+ 
+<strong>Empower your business with the GlobeX advantage!</strong>
+<a href="https://plus.google.com/100077075558269198691" rel="publisher">Google+</a></p>
+<div align="right"><a href="about-us.html" class="readmore">Read More...</a>
+</div>
+<div class="box">
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="images/web-design.png" width="56" height="56" alt="website design" title="website design" /></div></td>
+  </tr>
+  <tr>
+    <td align="center"><span style="color:#006699; font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-size:16px;">Website Design</span></td>
+  </tr>
+  <tr>
+    <td><p>As an experienced web design company we know that image everything in the competitive world of business.</p></td>
+  </tr>
+</table>
+</div>
+<div class="box">
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td><div align="center"><img src="images/soft-dev.png" width="56" height="56" alt="software development" title="software development" /></div></td>
+  </tr>
+  <tr>
+    <td align="center"><span style="color:#006699; font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-size:16px;">Software Development</span></td>
+  </tr>
+  <tr>
+    <td><p>What you want to create and share we have the development expertise to make it happen.</p></td>
+  </tr>
+</table>
+</div>
+<div class="box">
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td height="51"><div align="center"><img src="images/seo.png" width="56" height="51" alt="seo" title="marketing/ SEO" /></div></td>
+  </tr>
+  <tr>
+    <td align="center"><span style="color:#006699; font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-size:16px;">Marketing / SEO</span></td>
+  </tr>
+  <tr>
+    <td><p>Worry no more. we understand your concern and desire to get your site as high up as possible on search-results pages.</p></td>
+  </tr>
+</table>
+</div>
+
+
+</div>
+
+<div class="main_part_right">
+  <!--<h1><img src="images/services-img.png" /></h1> -->
+<!--<div class="glossymenu">
+<a class="menuitem" href="#"><span class="s_right"><img src="images/service_icon_rgt.png"  />&nbsp;Services</span></a>
+<a class="menuitem submenuheader" href="#" ><img src="images/li_doamian.png" />Domain Registration </a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Web Hosting </a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Website Development </a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Content Writing </a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Online Promotion </a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >SEO</a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Software Development</a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Graphic Designing</a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#" >Bulk SMS</a>
+<div class="submenu">
+	<ul>
+	<li><a href="#">Horizontal CSS Menus</a></li>
+	</ul>
+</div>
+<div class="testimonials_part">
+<h1 class="testimonials_part_top">Testimonials</h1>
+<p>GlobeX is a professional Web Design and web development company. GlobeX was founded in the year 2007 by a group of dedicated professionals who strive for excellence all in their endeavors. </p>
+</div>
+</div>-->
+<div class="services"> <span style="color:#000; font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; ">Services</span>
+    <ul>
+      <li><a href="domain-registratiom.html">&nbsp;<img src="images/li_doamian.png" />&nbsp;&nbsp;Domain Registration</a></li>
+      <li><a href="web-hosting.html">&nbsp;<img src="images/li_hosting.png" />&nbsp;&nbsp;Web Hosting</a></li>
+      <li><a href="website-development.html">&nbsp;<img src="images/li_web.png" />&nbsp;&nbsp;Website Development</a></li>
+      <li><a href="content-writing.html">&nbsp;<img src="images/content-writing.png" />&nbsp;&nbsp;Content Writing</a></li>
+      <li><a href="online-promotion.html">&nbsp;<img src="images/online-promotion.png" />&nbsp;&nbsp;Online Promotion</a></li>
+      <li><a href="seo.html">&nbsp;<img src="images/li_seo.png" />&nbsp;&nbsp;SEO</a></li>
+      <li><a href="software-development.html">&nbsp;<img src="images/s_devlopment.png" />&nbsp;&nbsp;Software Development</a></li>
+      <li><a href="graphic-designing.html">&nbsp;<img src="images/gra_desgin.png" />&nbsp;&nbsp;Graphic Designing</a></li>
+      <li><a href="bulk-sms.html">&nbsp;<img src="images/bulk_sms.png" />&nbsp;&nbsp;Bulk SMS</a></li>
+    </ul>
+</div>
+<div class="testimonials_part">
+<h1 class="testimonials_part_top">Testimonials</h1>
+<p>GlobeX is a professional Web Design and web development company. GlobeX was founded in the year 2007 by a group of dedicated professionals who strive for excellence all in their endeavors. </p>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="client_part">
+<h1 class="client_part_top">Our Clients</h1>
+<marquee direction="left" scrolldelay="100" behavior="alternate">
+&nbsp;&nbsp;<img src="images/site-logo/new-update-logo/@foods-logo.jpg" class="img" alt="globex" title="@foods"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/adarshpublicschool-logo.jpg" class="img" alt="globex" title="Adarsh Public School"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/agarwalsanjog-logo.jpg" class="img" alt="globex" title="Agarwalsanjog"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/agro-tech-food-logo.jpg" class="img" alt="globex" title="Agro tech Foods Limited"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/amreepharma-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/antheminternational-logo.jpg" class="img"alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/apimotors-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/appletreeindia-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/arora-eye-cetrer-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/ashaekkiran-logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/ATIHI-DEVA--LOGO.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/b.r.m-college-logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/bctfoods-logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/best-logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/bnps.logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/canbro-logo.jpg" class="img"/ alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/chabra-logo.jpg" class="img"/alt="globex">&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/crito-care-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/crop-india-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/cure-quick-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/deepak-pandit-logo.jpg" class="img" alt="globex" />&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/delhi-pain-reliff-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/diamond-incru-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/donkey-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/doon-international-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/dyalsingh-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/eca-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/eva-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/excutive-ladders.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/ganga-para-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/giit-logo.jpg" class="img" alt="globex" />&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/global-journal-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/gmh-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/goel-bush-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/green-field-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/green-groove-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/gupta-tech-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/guru-harkissan-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/guru-nanak-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/hare-rama-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/healty-salash-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/hotel-yellow-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/imrat-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/inddec-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/indian-dairy-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/jnson-logo.jpg" class="img"alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/kabra-age-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/karan-public-school-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/kazma-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/kissan-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/kmc-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/krishi-darshan-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/leela-grand-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/livestock-diggest-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/nata-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/new-world-residency-logo.jpg" class="img"alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/niffa-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/nirmal-public-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/oswal-pumps-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/pain-specialist-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/pt-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/rajdhani-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/rathi-acadmy-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/sacred-school-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/sainik-school-chi-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/shealing-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/shri-ram-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/shubh-snjog-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/smriti-log.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/solyram-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/sr-publication-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/ss-college-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/ss-international-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/stadia-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/stican-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/urban-dance.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/vaibhav-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/venix-global-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/vesta-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/v-help-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/xieon-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+<img src="images/site-logo/new-update-logo/yatra-addha-logo.jpg" class="img" alt="globex"/>&nbsp;&nbsp;
+
+
+<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="images/our_client/adarshpublicschool-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/b.r.m-college-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/budha-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/doon-international-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/dyalsingh-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/excellentiasacademy-logo.jpg" class="img"/></a>&nbsp;&nbsp;
+<a href="#"><img src="images/our_client/rpiit-logo.jpg" class="img"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+</marquee>
+</div>
+<!--<div class="work_icon">
+<img src="images/work-icon.png" style="margin:0 0 10px 0;"/>
+</div> -->
+</div>
+<!-----------main-ends-------------------------->
+<div class="clear"></div>
+<!------------------footer-start---------------------->
+<div id="footer">
+<div class="footer_part">
+<p>GlobeX © 2007-2013.All rights reserved</p>
+<div style="display: none;">
+<a href="https://hicas.ac.in/js/rp888/">https://hicas.ac.in/js/rp888/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">https://elearnksgst.kerala.gov.in/lib/hub/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">rp8888</a>
+<a href="https://homehub.co.th/duta168/">https://homehub.co.th/duta168/</a>
+<a href="https://qiscet.edu.in/tokekwin/">https://qiscet.edu.in/tokekwin/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">https://adhiyamaan.ac.in/robopragma/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">robopragma</a>
+<a href="https://namastehindustan.in/casino/">https://namastehindustan.in/casino/</a>
+<a href="https://namastehindustan.in/casino/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">scatter hitam</a>
+<a href="https://timesrnd.taylors.edu.my/slot-thailand/">https://timesrnd.taylors.edu.my/slot-thailand/</a>
+<a href="https://svcop.in/rp8888/">https://svcop.in/rp8888/</a>
+<a href="https://svcop.in/rp8888/">rp8888</a>
+<a href="https://bangkokems.bangkok.go.th/thailand/">https://bangkokems.bangkok.go.th/thailand</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">https://mail.hicas.ac.in/files/rp8888/</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">rp8888</a>
+<a href="https://www.infinite.co.th/assets/images/uploads/welcome/">https://www.infinite.co.th/assets/images/uploads/welcome/</a>
+<a href="http://hflight.net/gacor/">http://hflight.net/gacor/</a>
+<a href="https://e-training.imu.edu.my/data/">https://e-training.imu.edu.my/data/</a>
+<a href="https://e-training.imu.edu.my/data/">rp8888</a>
+<a href="https://dsmaxproperties.com/storage/">https://dsmaxproperties.com/storage/</a>
+<a href="https://dsmaxproperties.com/storage/">rp8888</a>
+<a href="https://gliztech.com/xfn/">https://gliztech.com/xfn/</a>
+<a href="https://pertanian.unitri.ac.id/games/">https://pertanian.unitri.ac.id/games/</a>
+<a href="https://pertanian.unitri.ac.id/games/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">https://stikesbanyuwangi.ac.id/siakad/</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">https://stikesbanyuwangi.ac.id/pddikti/</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">rp8888</a>
+</div>
+</div>
+</div>
+<!------------------footer-ends---------------------->
+</div>
+</body>
+</html>
