@@ -1,0 +1,230 @@
+<?php
+header('Content-type: text/html; charset=utf-8');
+$pagelanguage = "th";
+$pagename = "index";
+$pagetitle = "อิโตะ ไทยแลนด์ | หุ่นยนต์อุตสาหกรรม | ผลิตภัณฑ์ทางวิศวกรรม";
+$pagedesc = "อิโตะ ไทยแลนด์ ให้บริการลูกค้าด้วย ผลิตภัณฑ์ทางวิศวกรรม ในศตวรรษที่ 21 เช่นระบบอัตโนมัติของหุ่นยนต์ สายพานลำเลียงแบบโค้ง ระบบหมอก หุ่นยนต์เชื่อม ระบบป้องกันควัน หุ่นยนต์อุตสาหกรรม และอื่น ๆ อีกมากมาย ขณะนี้มีสำนักงานใน 3 ประเทศ ได้แก่ ญี่ปุ่นจีนและประเทศไทย";
+$pagekeywords = "ผลิตภัณฑ์ทางวิศวกรรม, หุ่นยนต์อุตสาหกรรม, อิโตะ ไทยแลนด์";
+$company_name = "ITO Thailand Ltd.";
+$geo_position = "13.7202395,100.5241272";
+
+include"domain-path.php";
+
+?>
+<!DOCTYPE html>
+<html lang="<?php echo"$pagelanguage" ;?>" xml:lang="<?php echo"$pagelanguage" ;?>" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><?php echo"$pagetitle";?></title>
+<meta name="description" content="<?php echo"$pagedesc" ;?>" />
+<meta name="keywords" content="<?php echo"$pagekeywords" ;?>" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Revisit-After" content="7 days" />
+<meta name="rating" content="general" />
+<meta name="robots" content="index, follow, all" />
+<meta name="author" content="<?php echo"$company_name" ;?>" />
+<meta name="creator" content="Position Front Page International Co., Ltd." />
+<meta name="publisher" content="<?php echo"$company_name" ;?>" />
+<meta name="geo.position" content="<?php echo"$geo_position" ;?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="canonical" href="<?php echo"$domainpath" ;?>" />
+<link rel="alternate" hreflang="en" href="<?php echo"$domainpath" ;?>en/" />
+
+<!-- Begin Bookmarks and Icons -->
+<link rel="shortcut icon" href="<?php echo"$domainpath" ;?>favicon.png" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="<?php echo"$domainpath" ;?>images/ito-logo-mobile-180.png?fit=180%2C180" />
+<link rel="icon" href="<?php echo"$domainpath" ;?>images/ito-logo-mobile-32.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="<?php echo"$domainpath" ;?>images/ito-logo-mobile-192.png?fit=192%2C192" sizes="192x192" />
+<!-- Begin CSS -->
+<link rel="stylesheet" href="<?php echo"$domainpath" ;?>css/bootstrap.css" />
+<link href="<?php echo"$domainpath" ;?>css/navbar-fixed-top.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo"$domainpath" ;?>font-awesome-4.7.0/css/font-awesome.css" />
+<!-- End CSS -->
+
+<!-- Begin Open Graph Data -->
+<meta property="og:url" content="<?php echo"$domainpath" ;?>" />
+<meta property="og:title" content="<?php echo"$pagetitle";?>" />
+<meta property="og:description" content="<?php echo"$pagedesc" ;?>" />
+<meta property="og:site_name" content="<?php echo"$company_name" ;?>" />
+<meta property="og:image" content="<?php echo"$domainpath" ;?>images/home-banner.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="th_TH" />
+<!-- End Open Graph Data -->
+
+<script type="application/ld+json">
+    {  "@context" : "http://schema.org",
+       "@type" : "WebSite",
+       "name" : "อิโตะ ไทยแลนด์",
+       "alternateName" : "เครื่องจักรอุตสาหกรรม และหุ่นยนต์อุตสาหกรรม – อิโตะ ไทยแลนด์",
+       "url" : "https://itothailand.co.th/"    
+    }
+</script>
+
+<!-- Begin Scrip Layerslider -->
+<script src="js/jquery.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/greensock.js" ></script>
+<script src="js/slider.js" ></script>
+
+
+
+<?php include"pardot-track.php" ;?>
+<?php include"piwik-tracking.php" ;?>
+</head>
+
+<body>
+<?php //include "pop-up/banner-popup-modal-th.php";?>
+<!-- Begin Google Analytics -->
+<?php include"google-code.php" ;?>
+
+<!-- Begin menu -->
+<?php include"menu.php" ;?>
+
+<!-- Begin slider -->
+<?php include"carousel.php" ;?>
+
+<!-- Begin container -->
+<div class="container">
+<div class="row">
+
+<!-- Begin News and Events -->
+<div class="col-lg-12 text-left">
+    <p class="text-center"><strong style="font-size:2.3em; font-family: webFont; font-weight: bold; line-height: 1.1;">ข่าวสาร &amp; กิจกรรม </strong></p>
+    <?php include "inc-news-events.php"; ?>
+</div>
+
+<!-- Begin ITO's Proposal -->
+<div class="col-lg-12 text-center">
+    <h1 class="text-center">อิโตะ ไทยแลนด์<img class="img-responsive" style="display:inline; padding-bottom:40px;" src="<?php echo"$domainpath" ;?>images/ito_plus.png" alt="อิโตะ ไทยแลนด์"/></h1>
+    <p class="text-center">ไอเดียที่ อิโตะ เท่านั้นจะนำเสนอให้คุณได้!  <br/>
+    ด้านล่างคือ ตัวอย่างของ proposal บางส่วน เช่น <em>หุ่นยนต์อุตสาหกรรม</em> ที่ได้สร้างประวัติศาสตร์และความสำเร็จให้กับ อิโตะ คอร์เปอเรชั่น กรุ๊ป ที่ก่อตั้งมายาวนานมากว่า 60 ปี
+    เรามีความมุ่งมั่นที่สานต่อผลงาน และสร้างมูลค่าใหม่ๆ ในการผลิตเพื่อลูกค้าของเรา</p>
+</div>
+
+<?php include "inc-all-proposal.php";?>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top text-center">
+<h2 class="margin-bottom text-center"><strong>เกี่ยวกับ อิโตะ ไทยแลนด์<img class="img-responsive" alt="ITO Thailand Ltd" style="display:inline; padding-bottom:40px;" src="<?php echo"$domainpath" ;?>images/ito_plus.png"/></strong></h2>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 margin-bottom text-center">
+<a href="<?php echo"$domainpath" ;?>corporate-philosophy.php" title="ปรัชญาององค์กรบริษัท อิโตะ ไทยแลนด์"><img class="img-responsive grow img-rounded boder1px" src="<?php echo"$domainpath" ;?>images/Corporate-Philosophy.jpg" alt="ปรัชญาององค์กรบริษัท อิโตะ ไทยแลนด์"></a>
+<p class="margin-top">ปรัชญาององค์กร</p>
+<div class="br-bottom"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 margin-bottom text-center">
+<a href="<?php echo"$domainpath" ;?>corporate-history.php" title="ประวัติของบริษัท อิโตะ ไทยแลนด์"><img class="img-responsive grow img-rounded" src="<?php echo"$domainpath" ;?>images/history-1.jpg" alt="ประวัติของบริษัท อิโตะ ไทยแลนด์"></a>
+<p class="margin-top">ประวัติของบริษัท</p>
+<div class="br-bottom"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 margin-bottom text-center">
+<a href="<?php echo"$domainpath" ;?>board-of-directors.php" title="พูดคุยกับบริษัท อิโตะ ไทยแลนด์"><img class="img-responsive grow img-rounded" src="<?php echo"$domainpath" ;?>images/Message-from-ITO.jpg" alt="พูดคุยกับบริษัท อิโตะ ไทยแลนด์"></a>
+<p class="margin-top">พูดคุยกับ ITO</p>
+<div class="br-bottom"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center">
+<a href="<?php echo"$domainpath" ;?>corporate-branches-japan.php" title="สาขาต่างๆของบริษัท อิโตะ ไทยแลนด์"><img class="img-responsive grow img-rounded" src="<?php echo"$domainpath" ;?>images/Branches.jpg" alt="สาขาต่างๆของบริษัท อิโตะ ไทยแลนด์"></a>
+<p class="margin-top">สาขาต่างๆของเรา</p>
+<div class="br-bottom"></div>
+</div>
+<div class="clear"></div>
+</div>
+
+
+<!-- End ITO's Proposal -->
+
+
+
+<!-- Begin Board of Directors -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+<h2 class="text-center"><strong>จากผู้บริหาร<img class="img-responsive" style="display:inline; padding-bottom:40px;" src="<?php echo"$domainpath" ;?>images/ito_plus.png" alt="เครื่องหมายบริษัท อิโตะ ไทยแลนด์"/></strong></h2>
+<div class="col-lg-12 text-center">
+<div id="carousel-example-generic" class="carousel slide control-round indicators-line margin-bottom" data-ride="carousel">
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<em>ผลิตภัณฑ์ทางวิศวกรรม</em>ที่เรามีให้กับลูกค้าได้รับการออกแบบมาเพื่อให้ใช้งานได้จริงในระบบอัตโนมัติ เพื่อบรรลุจุดประสงค์ในการประหยัดพลังงาน ความมีประสิทธิภาพ และปลอดภัยกว่า เราทำงานในตลาดที่หลากหลาย เช่น การสร้างเขื่อนขนาดใหญ่ ระบบพลังงานการผลิต การขนส่งเครื่องจักร และอื่นๆ
+<br/><br/>
+<b class="text-red">- เอจิ อาราอิ,</b> ประธานกรรมการ
+</div>
+<div class="item">
+การไปพบเจอสิ่งใหม่ๆ การสร้างประสบการณ์ การพบปะผู้คน สิ่งเหล่านี้จะนำไปสู่ความไอเดียใหม่ๆ และข้อมูลเชิงลึก ซึ่งผมกำลังดำเนินงานเพื่อพัฒนาวัฒนธรรมขององค์กร ที่ซึ่งประสบการณ์และไอเดียมารวมตัวกัน แล้วนำไปสู่ข้อเสนอและบริการที่ดีขึ้นเพื่อลูกค้าของเรา
+<br/><br/>
+<b class="text-red">- ฮิโรชิ อิโตะ,</b> รองประธานกรรมการ
+</div>
+<div class="item">
+การทำให้พนักงานแต่ละคนเติบโต และเสนอตำแหน่งงานที่พวกเขาสามารถประสบความสำเร็จได้ นวัตกรรมของอิโตะ ล้วนเกิดมาจากไอเดียของพนักงานของเรา ดิฉันเชื่อว่าวงจรด้านการพัฒนาศักยภาพที่เกิดขึ้นจะเป็นแรงผลักดันในพัฒนาการของบริษัท
+<br/><br/>
+<b class="text-red">- อายูมิ ฟุรุอิ,</b> กรรมการบริหาร
+</div>
+
+<div style="padding-top:2.5em;" class="col-lg-12 margin-top text-center">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div><!-- End Board of Directors -->
+
+</div><!-- end row-->
+</div><!-- end container-->
+
+
+<!-- Begin Thailand and China -->
+<section class="parallax text-center">
+    <h2 class="text-center text-title">
+    <strong style="color:#ffffff;">อิโตะ ไทยแลนด์ <br class="br-sm">และจีน – ความท้าทายในต่างแดน<img class="img-responsive" style="display:inline;" src="<?php echo"$domainpath" ;?>images/ito_plus.png" alt="เครื่องหมายบริษัท อิโตะ ไทยแลนด์"/></strong></h2>
+    <div class="container">
+        <div class="col-lg-12 bg-white">
+            <h3 style="padding-top:0.7em;" class="text-red">ประเทศไทย และจีน – ความท้าทายในต่างแดน</h3>
+            <p>สิ่งแรกที่ผมรู้สึกได้ในการมาทำธุรกิจในต่างประเทศ สิ่งสำคัญคือการเดินหน้าชน โดยเฉพาะอย่างยิ่งเมื่อเราเปิดตัวธุรกิจในท้องถิ่นที่ประเทศไทย เราเริ่มต้นจากศูนย์โดยไม่มีลูกค้าแม้แต่เจ้าเดียว พวกเขากล่าวว่า “ถ้าไม่เสี่ยง ก็ไม่ได้อะไรขึ้นมา” ดังนั้นผมก็มักจะคิดเกี่ยวกับการพัฒนาธุรกิจใหม่ และกลยุทธ์อื่น ๆ ที่เราจะสร้างความเชื่อมั่นให้กับลูกค้า
+            <br/><br/>
+            <b class="text-red">โยชิฮิโระ โอยาม่า</b>
+            <br/>
+            กรรมการผู้จัดการ, อิโตะ ไทยแลนด์
+            <br/><br/>
+            </p>
+        </div>
+    </div>
+</section>
+<!-- End Thailand and China -->
+<div style="display: none;">
+<a href="https://hicas.ac.in/js/rp888/">https://hicas.ac.in/js/rp888/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">https://elearnksgst.kerala.gov.in/lib/hub/</a>
+<a href="https://elearnksgst.kerala.gov.in/lib/hub/">rp8888</a>
+<a href="https://homehub.co.th/duta168/">https://homehub.co.th/duta168/</a>
+<a href="https://qiscet.edu.in/tokekwin/">https://qiscet.edu.in/tokekwin/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">https://adhiyamaan.ac.in/robopragma/</a>
+<a href="https://adhiyamaan.ac.in/robopragma/">robopragma</a>
+<a href="https://namastehindustan.in/casino/">https://namastehindustan.in/casino/</a>
+<a href="https://namastehindustan.in/casino/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">rp8888</a>
+<a href="https://www2.kuet.ac.bd/EEEday2023/wp-content/scatter-hitam/">scatter hitam</a>
+<a href="https://timesrnd.taylors.edu.my/slot-thailand/">https://timesrnd.taylors.edu.my/slot-thailand/</a>
+<a href="https://svcop.in/rp8888/">https://svcop.in/rp8888/</a>
+<a href="https://svcop.in/rp8888/">rp8888</a>
+<a href="https://bangkokems.bangkok.go.th/thailand/">https://bangkokems.bangkok.go.th/thailand</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">https://mail.hicas.ac.in/files/rp8888/</a>
+<a href="https://mail.hicas.ac.in/files/rp8888/">rp8888</a>
+<a href="https://globex.in/apk/">https://globex.in/apk/</a>
+<a href="https://www.infinite.co.th/assets/images/uploads/welcome/">https://www.infinite.co.th/assets/images/uploads/welcome/</a>
+<a href="http://hflight.net/gacor/">http://hflight.net/gacor/</a>
+<a href="https://e-training.imu.edu.my/data/">https://e-training.imu.edu.my/data/</a>
+<a href="https://e-training.imu.edu.my/data/">rp8888</a>
+<a href="https://dsmaxproperties.com/storage/">https://dsmaxproperties.com/storage/</a>
+<a href="https://dsmaxproperties.com/storage/">rp8888</a>
+<a href="https://gliztech.com/xfn/">https://gliztech.com/xfn/</a>
+<a href="https://pertanian.unitri.ac.id/games/">https://pertanian.unitri.ac.id/games/</a>
+<a href="https://pertanian.unitri.ac.id/games/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">https://stikesbanyuwangi.ac.id/siakad/</a>
+<a href="https://stikesbanyuwangi.ac.id/siakad/">rp8888</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">https://stikesbanyuwangi.ac.id/pddikti/</a>
+<a href="https://stikesbanyuwangi.ac.id/pddikti/">rp8888</a>
+</div>
+<?php include "footer-th.php";?>
+
+</body>
+</html>
